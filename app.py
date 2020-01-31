@@ -21,7 +21,7 @@ from tornado.httpserver import HTTPServer
 LOG_LEVELS = [log.ERROR, log.WARNING, log.INFO, log.DEBUG]
 STATIC_DIR = "static"
 TEMPLATES_DIR = "templates"
-FONTS_DIR = STATIC_DIR + "/fonts"
+FONTS_DIR = STATIC_DIR + "/fonts/2"
 SSL_OPTIONS = {
     "certfile": "app.crt",
     "keyfile": "app.key",
