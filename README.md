@@ -18,9 +18,11 @@ Or even better, you may consider using a [virtual environment](https://docs.pyth
 
 Fonts from the Betaflight project are not part of this repo, but are required by this app. Run [`update-fonts.sh`](update-fonts.sh) to download them from Betaflight Configurator's repo.
 
+* _This fork was modified to unzip both version 1 and version 2 fonts.  The `app.py` is hard-coded to point to version 2 fonts._
+
 ### Enable reCAPTCHA
 
-This web app supports [reCAPTCHA](https://www.google.com/recaptcha) to repell robots and keep them from spamming. Once you have created an account at the official reCAPTCHA home page and registered your site, you can provide the *site key* and *secret key* to the app to enable the reCAPTCHA widget. Copy [`recaptcha.cfg.sample`](recaptcha.cfg.sample) as `recaptcha.cfg` and edit the copied file to include the keys for your site. 
+This web app supports [reCAPTCHA](https://www.google.com/recaptcha) to repell robots and keep them from spamming. Once you have created an account at the official reCAPTCHA home page and registered your site, you can provide the *site key* and *secret key* to the app to enable the reCAPTCHA widget. Copy [`recaptcha.cfg.sample`](recaptcha.cfg.sample) as `recaptcha.cfg` and edit the copied file to include the keys for your site.
 
 ### Set up SSL
 
@@ -52,3 +54,7 @@ optional arguments:
                         0)
   -d, --debug           enable debug mode and autoreload (default: False)
 ```
+
+example: `./app.py --no-ssl --no-recaptcha -p 8080`
+
+Then open your web-browser to http://127.0.0.1:8080
